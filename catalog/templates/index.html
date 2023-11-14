@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class='features'>
+  <h1>Главная страница</h1>
+
+    <p>Добро пожаловать в <em>Книжный лис</em>, библиотеку для больших и маленьких.</p>
+
+</div>
+<div class='statistics'>
+  <h2>Статистика</h2>
+
+    <p>Количество записей в библиотеке:</p>
+    <ul>
+      <li><strong>Книги:</strong> {{ num_books }}</li>
+      <li><strong>Авторы:</strong> {{ num_authors }}</li>
+    </ul>
+
+  <p>
+    Количество посящений этой страницы: {{ num_visits }}{% if num_visits == 1 %} time{%
+    else %} times{% endif %}.
+  </p>
+</div>
+{% endblock %}
